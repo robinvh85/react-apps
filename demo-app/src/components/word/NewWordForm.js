@@ -10,7 +10,7 @@ class NewWordForm extends React.Component {
       <div>
         <div>
           <label>Word</label>
-          <input type='input' />
+          <input type="input" />
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import * as courseActions from "../../actions/courseActions";
+import CourseList from '../../components/course/CourseList';
 import { bindActionCreators } from 'redux';
 
 class CoursesPage extends React.Component {
@@ -40,9 +41,7 @@ class CoursesPage extends React.Component {
     return (
       <div>
         <h1>Courses</h1>
-        <ul>
-          {this.props.courses.map(this.courseRow)}
-        </ul>
+        <CourseList courses={this.props.courses} />
         <h2>Add course</h2>
         <input type="text"
           onChange={this.onTitleChange}
@@ -61,6 +60,7 @@ CoursesPage.propTypes = {
 };
 
 function mapStateToProps(state){
+  // console.log("mapStateToProps", state);
   return {
     courses: state.courses
   };
