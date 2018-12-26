@@ -9,7 +9,7 @@ const SelectInput = ({name, label, onChange, defaultOption, value, error, option
 
   return (
     <div className={wrapperClass}>
-      <label htmlFor={name}></label>
+      <label htmlFor={name}>{label}</label>
       <div className="field">
         <select
           type="text"
